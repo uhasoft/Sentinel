@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.alibaba.csp</groupId>
-    <artifactId>sentinel-parent</artifactId>
+    <groupId>com.uhasoft</groupId>
+    <artifactId>guardian-parent</artifactId>
     <version>1.8.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -26,7 +26,7 @@
     <developers>
         <developer>
             <name>The Sentinel Project Contributors</name>
-            <email>sentinel-dev@linux.alibaba.com</email>
+            <email>guardian-dev@linux.alibaba.com</email>
             <url>https://github.com/alibaba/Sentinel</url>
         </developer>
     </developers>
@@ -68,95 +68,95 @@
     </properties>
 
     <modules>
-        <module>sentinel-core</module>
-        <module>sentinel-extension</module>
-        <module>sentinel-transport</module>
-        <module>sentinel-adapter</module>
-        <module>sentinel-cluster</module>
-        <module>sentinel-logging</module>
+        <module>guardian-core</module>
+        <module>guardian-extension</module>
+        <module>guardian-transport</module>
+        <module>guardian-adapter</module>
+        <module>guardian-cluster</module>
+        <module>guardian-logging</module>
 
-        <module>sentinel-dashboard</module>
+        <module>guardian-dashboard</module>
 
-        <module>sentinel-demo</module>
-        <module>sentinel-benchmark</module>
+        <module>guardian-demo</module>
+        <module>guardian-benchmark</module>
 
     </modules>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.alibaba.csp</groupId>
-                <artifactId>sentinel-core</artifactId>
+                <groupId>com.uhasoft</groupId>
+                <artifactId>guardian-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.alibaba.csp</groupId>
-                <artifactId>sentinel-extension</artifactId>
+                <groupId>com.uhasoft</groupId>
+                <artifactId>guardian-extension</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.alibaba.csp</groupId>
-                <artifactId>sentinel-annotation-aspectj</artifactId>
+                <groupId>com.uhasoft</groupId>
+                <artifactId>guardian-annotation-aspectj</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.alibaba.csp</groupId>
-                <artifactId>sentinel-annotation-cdi-interceptor</artifactId>
+                <groupId>com.uhasoft</groupId>
+                <artifactId>guardian-annotation-cdi-interceptor</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.alibaba.csp</groupId>
-                <artifactId>sentinel-parameter-flow-control</artifactId>
+                <groupId>com.uhasoft</groupId>
+                <artifactId>guardian-parameter-flow-control</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.alibaba.csp</groupId>
-                <artifactId>sentinel-datasource-extension</artifactId>
+                <groupId>com.uhasoft</groupId>
+                <artifactId>guardian-datasource-extension</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.alibaba.csp</groupId>
-                <artifactId>sentinel-datasource-nacos</artifactId>
+                <groupId>com.uhasoft</groupId>
+                <artifactId>guardian-datasource-nacos</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.alibaba.csp</groupId>
-                <artifactId>sentinel-datasource-zookeeper</artifactId>
+                <groupId>com.uhasoft</groupId>
+                <artifactId>guardian-datasource-zookeeper</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.alibaba.csp</groupId>
-                <artifactId>sentinel-datasource-apollo</artifactId>
+                <groupId>com.uhasoft</groupId>
+                <artifactId>guardian-datasource-apollo</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.alibaba.csp</groupId>
-                <artifactId>sentinel-datasource-etcd</artifactId>
+                <groupId>com.uhasoft</groupId>
+                <artifactId>guardian-datasource-etcd</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.alibaba.csp</groupId>
-                <artifactId>sentinel-transport-simple-http</artifactId>
+                <groupId>com.uhasoft</groupId>
+                <artifactId>guardian-transport-simple-http</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.alibaba.csp</groupId>
-                <artifactId>sentinel-transport-netty-http</artifactId>
+                <groupId>com.uhasoft</groupId>
+                <artifactId>guardian-transport-netty-http</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.alibaba.csp</groupId>
-                <artifactId>sentinel-transport-common</artifactId>
+                <groupId>com.uhasoft</groupId>
+                <artifactId>guardian-transport-common</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.alibaba.csp</groupId>
-                <artifactId>sentinel-cluster-common-default</artifactId>
+                <groupId>com.uhasoft</groupId>
+                <artifactId>guardian-cluster-common-default</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.alibaba.csp</groupId>
-                <artifactId>sentinel-adapter</artifactId>
+                <groupId>com.uhasoft</groupId>
+                <artifactId>guardian-adapter</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -221,7 +221,7 @@
                     <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
                     <minimumPriority>1</minimumPriority>
                     <excludeRoots>
-                        <excludeRoot>com/alibaba/csp/sentinel/benchmark</excludeRoot>
+                        <excludeRoot>com/alibaba/csp/guardian/benchmark</excludeRoot>
                     </excludeRoots>
                     <excludes>
                         <exclude>**/*_jmhTest.java</exclude>

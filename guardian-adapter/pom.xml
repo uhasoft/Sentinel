@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.uhasoft</groupId>
+        <artifactId>guardian-parent</artifactId>
+        <version>1.8.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>guardian-adapter</artifactId>
+    <packaging>pom</packaging>
+    <name>guardian-adapter</name>
+    <description>The adapters of Sentinel</description>
+
+    <modules>
+        <module>guardian-web-servlet</module>
+        <module>guardian-dubbo-adapter</module>
+        <module>guardian-apache-dubbo-adapter</module>
+        <module>guardian-apache-httpclient-adapter</module>
+        <module>guardian-sofa-rpc-adapter</module>
+        <module>guardian-grpc-adapter</module>
+        <module>guardian-zuul-adapter</module>
+        <module>guardian-reactor-adapter</module>
+        <module>guardian-spring-webflux-adapter</module>
+        <module>guardian-api-gateway-adapter-common</module>
+        <module>guardian-spring-cloud-gateway-adapter</module>
+        <module>guardian-spring-webmvc-adapter</module>
+        <module>guardian-zuul2-adapter</module>
+        <module>guardian-okhttp-adapter</module>
+        <module>guardian-jax-rs-adapter</module>
+        <module>guardian-quarkus-adapter</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.uhasoft</groupId>
+                <artifactId>guardian-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.uhasoft</groupId>
+                <artifactId>guardian-extension</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.uhasoft</groupId>
+                <artifactId>guardian-web-servlet</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.uhasoft</groupId>
+                <artifactId>guardian-reactor-adapter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.uhasoft</groupId>
+                <artifactId>guardian-api-gateway-adapter-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mockito.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

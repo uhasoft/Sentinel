@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.uhasoft</groupId>
+        <artifactId>guardian-parent</artifactId>
+        <version>1.8.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>guardian-extension</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>guardian-datasource-extension</module>
+        <module>guardian-datasource-nacos</module>
+        <module>guardian-datasource-zookeeper</module>
+        <module>guardian-datasource-apollo</module>
+        <module>guardian-datasource-redis</module>
+        <module>guardian-annotation-aspectj</module>
+        <module>guardian-parameter-flow-control</module>
+        <module>guardian-datasource-spring-cloud-config</module>
+        <module>guardian-datasource-consul</module>
+        <module>guardian-datasource-etcd</module>
+        <module>guardian-datasource-eureka</module>
+        <module>guardian-annotation-cdi-interceptor</module>
+    </modules>
+
+</project>
