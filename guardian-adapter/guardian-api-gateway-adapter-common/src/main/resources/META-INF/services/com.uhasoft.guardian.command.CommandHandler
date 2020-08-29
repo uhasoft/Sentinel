@@ -1,0 +1,4 @@
+com.uhasoft.guardian.adapter.gateway.common.command.UpdateGatewayApiDefinitionGroupCommandHandler
+com.uhasoft.guardian.adapter.gateway.common.command.UpdateGatewayRuleCommandHandler
+com.uhasoft.guardian.adapter.gateway.common.command.GetGatewayApiDefinitionGroupCommandHandler
+com.uhasoft.guardian.adapter.gateway.common.command.GetGatewayRuleCommandHandler

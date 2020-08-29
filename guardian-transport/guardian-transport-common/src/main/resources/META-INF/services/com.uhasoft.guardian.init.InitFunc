@@ -1,0 +1,2 @@
+com.uhasoft.guardian.transport.init.CommandCenterInitFunc
+com.uhasoft.guardian.transport.init.HeartbeatSenderInitFunc

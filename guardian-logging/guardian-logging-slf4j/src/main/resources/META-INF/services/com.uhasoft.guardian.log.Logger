@@ -1,0 +1,2 @@
+com.uhasoft.guardian.logging.slf4j.RecordLogLogger
+com.uhasoft.guardian.logging.slf4j.CommandCenterLogLogger

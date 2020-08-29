@@ -1,0 +1,2 @@
+com.uhasoft.guardian.command.handler.GetParamFlowRulesCommandHandler
+com.uhasoft.guardian.command.handler.ModifyParamFlowRulesCommandHandler

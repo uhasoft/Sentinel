@@ -1,0 +1,2 @@
+com.uhasoft.guardian.cluster.server.processor.FlowRequestProcessor
+com.uhasoft.guardian.cluster.server.processor.ParamFlowRequestProcessor

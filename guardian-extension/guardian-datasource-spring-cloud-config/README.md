@@ -22,20 +22,20 @@ FlowRuleManager.register2Property(flowRuleDs.getProperty());
 ```
 
 To notify the client that the remote config has changed, we could bind a git webhook callback with the
-`com.alibaba.csp.sentinel.datasource.spring.cloud.config.SentinelRuleLocator.refresh` API.
-We may refer to the the sample `com.alibaba.csp.sentinel.datasource.spring.cloud.config.test.SpringCouldDataSourceTest#refresh` in test cases.
+`SentinelRuleLocator.refresh` API.
+We may refer to the the sample `SpringCouldDataSourceTest#refresh` in test cases.
 
 We offer test cases and demo in the package: `com.alibaba.csp.sentinel.datasource.spring.cloud.config.test`.
 When you are running test cases, please follow the steps:
 
 ```
 // First, start the Spring Cloud config server
-com.alibaba.csp.sentinel.datasource.spring.cloud.config.server.ConfigServer
+ConfigServer
 
 // Second, start the Spring Cloud config client
-com.alibaba.csp.sentinel.datasource.spring.cloud.config.client.ConfigClient
+ConfigClient
 
 // Third, run the test cases and demo
-com.alibaba.csp.sentinel.datasource.spring.cloud.config.test.SentinelRuleLocatorTests
-com.alibaba.csp.sentinel.datasource.spring.cloud.config.test.SpringCouldDataSourceTest
+SentinelRuleLocatorTests
+SpringCouldDataSourceTest
 ```

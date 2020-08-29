@@ -16,7 +16,7 @@ To activate the filter, you can simply configure your `web.xml` with:
 ```xml
 <filter>
 	<filter-name>SentinelCommonFilter</filter-name>
-	<filter-class>com.alibaba.csp.sentinel.adapter.servlet.CommonFilter</filter-class>
+	<filter-class>CommonFiltercom.uhasoft.guardian.adapter.servlet.CommonFilter</filter-class>
 </filter>
 
 <filter-mapping>

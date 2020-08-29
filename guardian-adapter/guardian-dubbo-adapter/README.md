@@ -37,8 +37,8 @@ For more details of Dubbo filter, see [here](http://dubbo.apache.org/en-us/docs/
 
 The resource for Dubbo services has two granularities: service interface and service method.
 
-- Service interface：resourceName format is `interfaceName`，e.g. `com.alibaba.csp.sentinel.demo.dubbo.FooService`
-- Service method：resourceName format is `interfaceName:methodSignature`，e.g. `com.alibaba.csp.sentinel.demo.dubbo.FooService:sayHello(java.lang.String)`
+- Service interface：resourceName format is `interfaceName`，e.g. `FooService`
+- Service method：resourceName format is `interfaceName:methodSignature`，e.g. `FooService:sayHello(java.lang.String)`
 
 ## Flow control based on caller
 

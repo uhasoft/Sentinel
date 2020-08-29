@@ -1,0 +1,17 @@
+com.uhasoft.guardian.command.handler.BasicInfoCommandHandler
+com.uhasoft.guardian.command.handler.FetchActiveRuleCommandHandler
+com.uhasoft.guardian.command.handler.FetchClusterNodeByIdCommandHandler
+com.uhasoft.guardian.command.handler.FetchClusterNodeHumanCommandHandler
+com.uhasoft.guardian.command.handler.FetchJsonTreeCommandHandler
+com.uhasoft.guardian.command.handler.FetchOriginCommandHandler
+com.uhasoft.guardian.command.handler.FetchSimpleClusterNodeCommandHandler
+com.uhasoft.guardian.command.handler.FetchSystemStatusCommandHandler
+com.uhasoft.guardian.command.handler.FetchTreeCommandHandler
+com.uhasoft.guardian.command.handler.ModifyRulesCommandHandler
+com.uhasoft.guardian.command.handler.OnOffGetCommandHandler
+com.uhasoft.guardian.command.handler.OnOffSetCommandHandler
+com.uhasoft.guardian.command.handler.SendMetricCommandHandler
+com.uhasoft.guardian.command.handler.VersionCommandHandler
+com.uhasoft.guardian.command.handler.cluster.FetchClusterModeCommandHandler
+com.uhasoft.guardian.command.handler.cluster.ModifyClusterModeCommandHandler
+com.uhasoft.guardian.command.handler.ApiCommandHandler

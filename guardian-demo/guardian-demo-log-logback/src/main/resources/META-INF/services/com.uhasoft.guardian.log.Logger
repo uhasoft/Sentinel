@@ -1,0 +1,2 @@
+com.uhasoft.guardian.demo.log.logback.RecordLogLoggerImpl
+com.uhasoft.guardian.demo.log.logback.CommandCenterLogLoggerImpl

@@ -31,17 +31,17 @@ public ConsumerConfig consumerConfig() {
 
 Service Provider 用于向外界提供服务，处理各个消费者的调用请求。为了保护 Provider 不被激增的流量拖垮影响稳定性，可以给 Provider 配置 **QPS 模式**的限流，这样当每秒的请求量超过设定的阈值时会自动拒绝多的请求。限流粒度可以是服务接口和服务方法两种粒度。若希望整个服务接口的 QPS 不超过一定数值，则可以为对应服务接口资源（resourceName 为**接口全限定名**）配置 QPS 阈值；若希望服务的某个方法的 QPS 不超过一定数值，则可以为对应服务方法资源（resourceName 为**接口全限定名:方法签名**）配置 QPS 阈值。有关配置详情请参考 [流量控制 | Sentinel](https://github.com/alibaba/Sentinel/wiki/%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6)。
 
-Demo 1 演示了此限流场景，我们看一下这种模式的限流产生的效果。假设我们已经定义了某个服务接口 `com.alibaba.csp.sentinel.demo.dubbo.FooService`，其中有一个方法 `sayHello(java.lang.String)`，Provider 端该方法设定 QPS 阈值为 10。在 Consumer 端在 1s 之内连续发起 15 次调用，可以通过日志文件看到 Provider 端被限流。拦截日志统一记录在 `~/logs/csp/sentinel-block.log` 中：
+Demo 1 演示了此限流场景，我们看一下这种模式的限流产生的效果。假设我们已经定义了某个服务接口 `FooService`，其中有一个方法 `sayHello(java.lang.String)`，Provider 端该方法设定 QPS 阈值为 10。在 Consumer 端在 1s 之内连续发起 15 次调用，可以通过日志文件看到 Provider 端被限流。拦截日志统一记录在 `~/logs/csp/sentinel-block.log` 中：
 
 ```
-2018-07-24 17:13:43|1|com.alibaba.csp.sentinel.demo.dubbo.FooService:sayHello(java.lang.String),FlowException,default,|5,0
+2018-07-24 17:13:43|1|FooService:sayHello(java.lang.String),FlowException,default,|5,0
 ```
 
 在 Provider 对应的 metrics 日志中也有记录：
 
 ```
-1532423623000|2018-07-24 17:13:43|com.alibaba.csp.sentinel.demo.dubbo.FooService|15|0|15|0|3
-1532423623000|2018-07-24 17:13:43|com.alibaba.csp.sentinel.demo.dubbo.FooService:sayHello(java.lang.String)|10|5|10|0|0
+1532423623000|2018-07-24 17:13:43|FooService|15|0|15|0|3
+1532423623000|2018-07-24 17:13:43|FooService:sayHello(java.lang.String)|10|5|10|0|0
 ```
 
 很多场景下，根据**调用方**来限流也是非常重要的。比如有两个服务 A 和 B 都向 Service Provider 发起调用请求，我们希望只对来自服务 B 的请求进行限流，则可以设置限流规则的 `limitApp` 为服务 B 的名称。Sentinel Dubbo Adapter 会自动解析 Dubbo 消费者（调用方）的 application name 作为调用方名称（`origin`），在进行资源保护的时候都会带上调用方名称。若限流规则未配置调用方（`default`），则该限流规则对所有调用方生效。若限流规则配置了调用方则限流规则将仅对指定调用方生效。
@@ -51,7 +51,7 @@ Demo 1 演示了此限流场景，我们看一下这种模式的限流产生的�
 在限流日志中会也会记录调用方的名称，如：
 
 ```
-2018-07-25 16:26:48|1|com.alibaba.csp.sentinel.demo.dubbo.FooService:sayHello(java.lang.String),FlowException,default,demo-consumer|5,0
+2018-07-25 16:26:48|1|FooService:sayHello(java.lang.String),FlowException,default,demo-consumer|5,0
 ```
 
 其中日志中的 `demo-consumer` 即为调用方名称。

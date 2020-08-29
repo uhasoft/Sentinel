@@ -1,0 +1,2 @@
+com.uhasoft.guardian.command.handler.ModifyClusterClientConfigHandler
+com.uhasoft.guardian.command.handler.FetchClusterClientConfigHandler

@@ -1,0 +1,9 @@
+# Sentinel default ProcessorSlots
+com.uhasoft.guardian.slots.nodeselector.NodeSelectorSlot
+com.uhasoft.guardian.slots.clusterbuilder.ClusterBuilderSlot
+com.uhasoft.guardian.slots.logger.LogSlot
+com.uhasoft.guardian.slots.statistic.StatisticSlot
+com.uhasoft.guardian.slots.block.authority.AuthoritySlot
+com.uhasoft.guardian.slots.system.SystemSlot
+com.uhasoft.guardian.slots.block.flow.FlowSlot
+com.uhasoft.guardian.slots.block.degrade.DegradeSlot

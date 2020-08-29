@@ -46,7 +46,7 @@ your `aop.xml`:
 
 ```xml
 <aspects>
-    <aspect name="com.alibaba.csp.sentinel.annotation.aspectj.SentinelResourceAspect"/>
+    <aspect name="com.uhasoft.guardian.annotation.aspectj.SentinelResourceAspect"/>
 </aspects>
 ```
 

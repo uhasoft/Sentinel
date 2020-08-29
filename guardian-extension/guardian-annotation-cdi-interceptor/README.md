@@ -53,7 +53,7 @@ we may add configuration in `resources/META-INF/beans.xml` like this:
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/beans_2_0.xsd" bean-discovery-mode="all" version="2.0">
     <interceptors>
-        <class>com.alibaba.csp.sentinel.annotation.cdi.interceptor.SentinelResourceInterceptor</class>
+        <class>SentinelResourceInterceptor</class>
     </interceptors>
 </beans>
 ```
